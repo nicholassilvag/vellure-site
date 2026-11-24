@@ -224,3 +224,8 @@ html{scroll-padding-top:110px}
 .comparar thead th{background:var(--noite);color:#F1E8DE;font-weight:600}
 .comparar tbody tr:last-child td{border-bottom:0}
 .plano .nota a{color:inherit;text-decoration:underline}
+@media (max-width:640px){
+  .comparar table{font-size:12.5px}
+  .comparar th,.comparar td{padding:9px 5px}
+  .comparar td:first-child,.comparar th:first-child{width:40%;padding-left:10px}
+}
