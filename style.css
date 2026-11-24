@@ -206,3 +206,7 @@ footer{background:var(--noite);color:#A99B8E;padding:44px max(5vw,18px);font-siz
   .faixa b{font-size:21px}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}.js .surge{opacity:1;transform:none}}
+
+.aviso-dev{background:var(--ouro);color:var(--noite);text-align:center;font-size:13.5px;font-weight:600;padding:7px 16px}
+.hero{padding-top:clamp(150px,15vw,180px)}
+html{scroll-padding-top:110px}
