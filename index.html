@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vellure — avaliação estética em 3D</title>
+<meta name="description" content="Vellure: escaneamento facial 3D, simulação de procedimentos, avaliação corporal e relatórios em PDF no tablet da clínica. Teste 7 dias grátis.">
+<meta property="og:title" content="Vellure — avaliação estética em 3D">
+<meta property="og:description" content="Escaneie, simule e mostre à paciente o resultado antes do procedimento.">
+<meta property="og:image" content="https://vellure3d.com.br/assets/abertura.jpg">
+<meta property="og:url" content="https://vellure3d.com.br/">
+<link rel="canonical" href="https://vellure3d.com.br/">
+<meta name="theme-color" content="#16110E">
+<link rel="icon" href="assets/favicon.png">
+<link rel="stylesheet" href="style.css">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+
+<header id="topo">
+  <div class="topo">
+    <a class="marca" href="#inicio"><img src="assets/icone.png" alt="">Vellure</a>
+    <nav class="menu" aria-label="Seções">
+      <a href="#resultados">Resultados</a>
+      <a href="#como-funciona">Como funciona</a>
+      <a href="#recursos">Recursos</a>
+      <a href="#calculadora">Retorno</a>
+      <a href="#planos">Planos</a>
+    </nav>
+    <a class="btn cheio" href="#planos">Teste grátis</a>
+  </div>
+</header>
+
+<main id="inicio">
+
+<section class="hero">
+  <div class="hero-in">
+    <div>
+      <span class="eyebrow">Para clínicas de estética</span>
+      <h1>Escaneie. Simule. <em>Encante.</em></h1>
+      <p class="lead">O Vellure transforma o tablet da clínica num estúdio 3D: escaneia o rosto, simula o procedimento na própria face da paciente e entrega o relatório na hora.</p>
+      <div class="hero-acoes">
+        <a class="btn cheio" href="#planos">Teste 7 dias grátis <span class="seta">→</span></a>
+        <a class="btn vidro" href="#como-funciona">Ver demonstração</a>
+      </div>
+      <div class="confianca"><span>Funciona sem internet</span><span>Dados criptografados no aparelho</span><span>Português e inglês</span></div>
+    </div>
+    <div class="palco">
+      <div class="tablet">
+        <div class="tela-t">
+          <video id="loop" src="assets/hero-loop.mp4" poster="assets/hero-loop.jpg" autoplay muted loop playsinline aria-label="Modelo 3D de rosto girando"></video>
+          <div class="abas" aria-hidden="true"><span>Foto 2D</span><span>3D</span><span id="ab-relevo">Relevo</span><span id="ab-malha" class="on">Malha</span></div>
+          <span class="chip-tela">Imagem ilustrativa</span>
+        </div>
+      </div>
+      <div class="celular"><img src="assets/tel-corpo.jpg" alt="Avaliação corporal em relevo 3D"></div>
+    </div>
+  </div>
+</section>
+
+<div class="faixa">
+  <div class="wrap">
+    <div><b>4 visualizações</b><span>Foto 2D, 3D, Relevo e Malha</span></div>
+    <div><b>5 regiões faciais</b><span>Lábios, mento, malar, mandíbula e nariz</span></div>
+    <div><b>100% no aparelho</b><span>Sem nuvem: os dados ficam na clínica</span></div>
+    <div><b>7 dias grátis</b><span>Em qualquer plano</span></div>
+  </div>
+</div>
+
+<section class="band" id="resultados">
+  <div class="wrap centro">
+    <span class="eyebrow">Mostre, não explique</span>
+    <h2>A paciente vê o que você está propondo</h2>
+    <p class="lead">Rosto e corpo em 3D na tela do tablet. Menos imaginação, mais segurança na decisão.</p>
+    <div class="trio">
+      <figure class="surge">
+        <div class="cel"><img src="assets/tel-face.jpg" alt="Face 3D com antes e depois lado a lado" loading="lazy"><span class="rot">Antes | Depois</span></div>
+        <figcaption><h3>Simulação facial</h3><p>Ajuste a intensidade e compare na hora.</p></figcaption>
+      </figure>
+      <figure class="surge">
+        <div class="cel"><img src="assets/tel-malha.jpg" alt="Malha 3D do rosto" loading="lazy"><span class="rot">Malha 3D</span></div>
+        <figcaption><h3>Escaneamento 3D</h3><p>Fotos guiadas viram um modelo que gira com o toque.</p></figcaption>
+      </figure>
+      <figure class="surge">
+        <div class="cel"><img src="assets/tel-corpo.jpg" alt="Glúteo em relevo 3D" loading="lazy"><span class="rot">Glúteo • Relevo</span></div>
+        <figcaption><h3>Avaliação corporal</h3><p>Corpo inteiro ou só a região, com medidas e postura.</p></figcaption>
+      </figure>
+    </div>
+    <p class="nota" style="margin-top:34px">Imagens ilustrativas. As simulações não são previsão nem garantia de resultado.</p>
+  </div>
+</section>
+
+<section class="band creme">
+  <div class="wrap ad">
+    <div class="surge">
+      <span class="eyebrow">Antes e depois</span>
+      <h2>Arraste e veja a diferença</h2>
+      <p class="lead">No app, a profissional escolhe a região, ajusta a intensidade e mostra o resultado na face 3D da paciente, girando em qualquer ângulo. Segure o botão para voltar ao antes.</p>
+      <div class="chips"><span class="on">Lábios</span><span>Mento</span><span>Malar</span><span>Mandíbula</span><span>Nariz</span><span>Glúteo</span></div>
+      <p class="nota" style="margin-top:20px">Imagens ilustrativas. A simulação não é garantia de resultado.</p>
+    </div>
+    <div class="comp surge" id="comp">
+      <img src="assets/antes.jpg" alt="Antes: modelo 3D do rosto">
+      <img class="depois" src="assets/depois.jpg" alt="Depois: simulação de volume nos lábios">
+      <div class="barra"></div>
+      <span class="rotulo" style="left:18px">ANTES</span>
+      <span class="rotulo" style="right:18px">DEPOIS</span>
+      <input type="range" min="0" max="100" value="50" aria-label="Comparar antes e depois" id="compx">
+    </div>
+  </div>
+</section>
+
+<section class="band escuro" id="como-funciona">
+  <div class="wrap demo">
+    <div class="cel-video surge">
+      <video src="assets/demo.mp4" poster="assets/demo-capa.jpg" controls muted loop playsinline preload="metadata"></video>
+    </div>
+    <div>
+      <span class="eyebrow">Como funciona</span>
+      <h2>Da foto à decisão em quatro passos</h2>
+      <p class="lead">Sem equipamento extra. A câmera do tablet faz o trabalho.</p>
+      <ol class="passos">
+        <li><div><h3>Escaneie</h3><p>O app guia as fotos do rosto e monta o modelo 3D.</p></div></li>
+        <li><div><h3>Simule</h3><p>Lábios, mento, malar, mandíbula ou nariz, com o antes e o depois na própria face.</p></div></li>
+        <li><div><h3>Avalie o corpo</h3><p>Corpo inteiro ou só a região, com medidas, postura e simulação por área.</p></div></li>
+        <li><div><h3>Entregue</h3><p>Relatório em PDF com imagens, medidas e termos, com a marca da sua clínica.</p></div></li>
+      </ol>
+      <p class="nota" style="color:#9E9288;margin-top:24px">Vídeo com imagens ilustrativas.</p>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="recursos">
+  <div class="wrap centro">
+    <span class="eyebrow">Recursos</span>
+    <h2>Feito para a rotina da clínica</h2>
+    <div class="recursos" style="text-align:left">
+      <div class="recurso surge"><svg viewBox="0 0 46 46" aria-hidden="true"><rect width="46" height="46" rx="14" fill="#F8E6CE"/><path d="M15 25a8 8 0 0 1 16 0M19 29h8" stroke="#9C5B55" stroke-width="2.4" fill="none" stroke-linecap="round"/><path d="M12 14l22 18" stroke="#9C5B55" stroke-width="2.4" stroke-linecap="round"/></svg><h3>Funciona sem internet</h3><p>O 3D e a detecção do rosto e do corpo rodam no próprio aparelho.</p></div>
+      <div class="recurso surge"><svg viewBox="0 0 46 46" aria-hidden="true"><rect width="46" height="46" rx="14" fill="#F8E6CE"/><rect x="15" y="21" width="16" height="12" rx="3" fill="none" stroke="#9C5B55" stroke-width="2.4"/><path d="M18 21v-3a5 5 0 0 1 10 0v3" fill="none" stroke="#9C5B55" stroke-width="2.4"/></svg><h3>Dados criptografados</h3><p>Fichas, fotos e modelos ficam só no aparelho da clínica.</p></div>
+      <div class="recurso surge"><svg viewBox="0 0 46 46" aria-hidden="true"><rect width="46" height="46" rx="14" fill="#F8E6CE"/><path d="M16 12h10l5 5v17H16z" fill="none" stroke="#9C5B55" stroke-width="2.4" stroke-linejoin="round"/><path d="M20 24h8M20 28h6" stroke="#9C5B55" stroke-width="2.4" stroke-linecap="round"/></svg><h3>Relatórios em PDF</h3><p>Antes/depois, medidas, procedimentos e termos com a sua marca.</p></div>
+      <div class="recurso surge"><svg viewBox="0 0 46 46" aria-hidden="true"><rect width="46" height="46" rx="14" fill="#F8E6CE"/><circle cx="19" cy="19" r="4" fill="none" stroke="#9C5B55" stroke-width="2.4"/><circle cx="29" cy="21" r="3.2" fill="none" stroke="#9C5B55" stroke-width="2.4"/><path d="M12 32a7 7 0 0 1 14 0M25 32a5.5 5.5 0 0 1 9.5-3.6" fill="none" stroke="#9C5B55" stroke-width="2.4" stroke-linecap="round"/></svg><h3>Equipe com login</h3><p>Cada profissional com seu acesso e registro de quem alterou o quê.</p></div>
+      <div class="recurso surge"><svg viewBox="0 0 46 46" aria-hidden="true"><rect width="46" height="46" rx="14" fill="#F8E6CE"/><circle cx="23" cy="23" r="9" fill="none" stroke="#9C5B55" stroke-width="2.4"/><path d="M14 23h18M23 14c3 3 3 15 0 18M23 14c-3 3-3 15 0 18" fill="none" stroke="#9C5B55" stroke-width="2"/></svg><h3>Português e inglês</h3><p>Troque o idioma quando quiser, já na tela de boas-vindas.</p></div>
+      <div class="recurso surge"><svg viewBox="0 0 46 46" aria-hidden="true"><rect width="46" height="46" rx="14" fill="#F8E6CE"/><path d="M23 12l8 3v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10v-6z" fill="none" stroke="#9C5B55" stroke-width="2.4" stroke-linejoin="round"/><path d="M19 22l3 3 5-6" fill="none" stroke="#9C5B55" stroke-width="2.4" stroke-linecap="round"/></svg><h3>Pensado para a LGPD</h3><p>Autorização da paciente, exportação e exclusão dos dados na ficha.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="band creme" id="calculadora">
+  <div class="wrap centro">
+    <span class="eyebrow">Retorno</span>
+    <h2>Quanto o Vellure pode trazer para a sua clínica?</h2>
+    <p class="lead">Coloque os seus números. A conta mostra quanto fatura a mais se a simulação ajudar a fechar mais procedimentos.</p>
+    <div class="calc surge">
+      <div class="calc-in">
+        <div class="campo"><label for="c-av">Avaliações por mês <output id="o-av"></output></label><input type="range" id="c-av" min="5" max="200" step="1" value="30"></div>
+        <div class="campo"><label for="c-tk">Valor médio do procedimento <output id="o-tk"></output></label><input type="range" id="c-tk" min="300" max="10000" step="100" value="1500"></div>
+        <div class="campo"><label for="c-fc">Taxa de fechamento hoje <output id="o-fc"></output></label><input type="range" id="c-fc" min="5" max="90" step="1" value="40"></div>
+        <div class="campo"><label for="c-ga">Aumento que você espera no fechamento <output id="o-ga"></output></label><input type="range" id="c-ga" min="1" max="30" step="1" value="5"></div>
+      </div>
+      <div class="calc-out" aria-live="polite">
+        <p>Faturamento a mais por mês (estimativa)</p>
+        <div class="grande" id="r-rec">R$ 0</div>
+        <div class="linha"><span>Procedimentos a mais por mês</span><b id="r-proc">0</b></div>
+        <div class="linha"><span>Custo do Vellure (plano anual)</span><b>R$ 197/mês</b></div>
+        <div class="linha"><span>Procedimentos que pagam o mês</span><b id="r-paga">1</b></div>
+        <p class="nota" style="color:#9E9288">Conta feita só com os números que você escolheu. Não é promessa de resultado.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="planos">
+  <div class="wrap centro">
+    <span class="eyebrow">Planos</span>
+    <h2>Acesso completo em todos os planos</h2>
+    <p class="lead">Assinatura feita e cancelada pela loja de apps, sem fidelidade.</p>
+    <div class="planos">
+      <div class="plano">
+        <h3>Mensal</h3>
+        <div class="preco">R$ 247<small> /mês</small></div>
+        <p class="nota">Cobrado todo mês</p>
+        <ul><li>Facial 3D e simulações</li><li>Avaliação corporal</li><li>Relatórios em PDF</li></ul>
+        <a class="btn claro" href="#contato">Começar teste</a>
+      </div>
+      <div class="plano dest">
+        <span class="badge">Economize 20%</span>
+        <h3>Anual</h3>
+        <div class="preco">R$ 197<small> /mês</small></div>
+        <p class="nota">R$ 2.364 cobrados uma vez por ano</p>
+        <ul><li>Tudo do plano mensal</li><li>Melhor preço por mês</li><li>Preço garantido por 12 meses</li></ul>
+        <a class="btn cheio" href="#contato">Começar teste</a>
+      </div>
+      <div class="plano">
+        <span class="badge" style="background:var(--creme)">Economize 11%</span>
+        <h3>Trimestral</h3>
+        <div class="preco">R$ 219<small> /mês</small></div>
+        <p class="nota">R$ 657 cobrados a cada 3 meses</p>
+        <ul><li>Tudo do plano mensal</li><li>Renovação a cada 3 meses</li></ul>
+        <a class="btn claro" href="#contato">Começar teste</a>
+      </div>
+    </div>
+    <p class="teste">7 dias grátis em qualquer plano. A cobrança só começa depois do teste.</p>
+  </div>
+</section>
+
+<section class="band" id="perguntas" style="background:var(--papel)">
+  <div class="wrap centro">
+    <span class="eyebrow">Dúvidas</span>
+    <h2>Perguntas frequentes</h2>
+    <div class="faq">
+      <details><summary>Preciso de algum equipamento?</summary><p>Não. O Vellure usa a câmera do próprio tablet ou celular. Recomendamos um tablet, pela tela maior na hora de mostrar à paciente.</p></details>
+      <details><summary>Funciona sem internet?</summary><p>Sim. O escaneamento, as simulações e os relatórios funcionam offline. A internet só é usada para confirmar a assinatura na loja de apps.</p></details>
+      <details><summary>Onde ficam os dados das pacientes?</summary><p>Somente no aparelho da clínica, em banco de dados criptografado. A Vellure não recebe nem armazena dados de pacientes. Os arquivos só saem do aparelho quando a clínica exporta, gera um relatório ou faz backup.</p></details>
+      <details><summary>A simulação garante o resultado?</summary><p>Não. As simulações são ilustrativas e servem para alinhar expectativas. O resultado real depende da avaliação clínica, da técnica e de cada paciente.</p></details>
+      <details><summary>Em quais aparelhos funciona?</summary><p>Android (tablets e celulares). A versão para iPhone e iPad está em preparação.</p></details>
+      <details><summary>Como cancelo?</summary><p>Pela própria loja de apps, em Assinaturas, a qualquer momento. Cancelando antes do fim dos 7 dias grátis, nada é cobrado.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="band final" id="contato">
+  <div class="wrap">
+    <h2>Leve a avaliação 3D para a sua clínica</h2>
+    <p>O Vellure chega em breve à Google Play. Comece com 7 dias grátis em qualquer plano.</p>
+    <a class="btn claro" href="#planos">Ver planos <span class="seta">→</span></a>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="rodape">
+    <a class="marca" href="#inicio" style="color:#E9D9C6"><img src="assets/icone.png" alt="">Vellure</a>
+    <nav aria-label="Rodapé">
+      <a href="termos.html">Termos de Uso</a>
+      <a href="privacidade.html">Política de Privacidade</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <span>© 2026 Vellure · Imagens ilustrativas</span>
+  </div>
+</footer>
+
+<script>
+{
+  const topo = document.getElementById('topo');
+  const onScroll = () => topo.classList.toggle('solido', scrollY > 40);
+  addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  const comp = document.getElementById('comp');
+  const cx = document.getElementById('compx');
+  const setX = v => comp.style.setProperty('--x', v + '%');
+  cx.addEventListener('input', () => setX(cx.value));
+  setX(cx.value);
+
+  const loop = document.getElementById('loop');
+  const abR = document.getElementById('ab-relevo'), abM = document.getElementById('ab-malha');
+  const sync = () => {
+    const t = (loop.currentTime || 0) % 6;
+    const malha = Math.cos(2 * Math.PI * t / 6) > 0;
+    abM.classList.toggle('on', malha);
+    abR.classList.toggle('on', !malha);
+  };
+  loop.addEventListener('timeupdate', sync);
+
+  const $ = id => document.getElementById(id);
+  const brl = v => 'R$ ' + Math.round(v).toLocaleString('pt-BR');
+  const calc = () => {
+    const av = +$('c-av').value, tk = +$('c-tk').value, fc = +$('c-fc').value, ga = +$('c-ga').value;
+    $('o-av').textContent = av;
+    $('o-tk').textContent = brl(tk);
+    $('o-fc').textContent = fc + '%';
+    $('o-ga').textContent = '+' + ga + ' pontos';
+    const extra = av * Math.min(ga, 100 - fc) / 100;
+    $('r-proc').textContent = extra.toLocaleString('pt-BR', { maximumFractionDigits: 1 });
+    $('r-rec').textContent = brl(extra * tk);
+    $('r-paga').textContent = Math.max(1, Math.ceil(197 / tk));
+  };
+  ['c-av', 'c-tk', 'c-fc', 'c-ga'].forEach(id => $(id).addEventListener('input', calc));
+  calc();
+
+  const io = new IntersectionObserver(es => es.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('vis'); io.unobserve(e.target); }
+  }), { threshold: 0.15 });
+  document.querySelectorAll('.surge').forEach(el => io.observe(el));
+}
+</script>
+</body>
+</html>
