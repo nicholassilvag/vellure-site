@@ -210,3 +210,9 @@ footer{background:var(--noite);color:#A99B8E;padding:44px max(5vw,18px);font-siz
 .aviso-dev{background:var(--ouro);color:var(--noite);text-align:center;font-size:13.5px;font-weight:600;padding:7px 16px}
 .hero{padding-top:clamp(150px,15vw,180px)}
 html{scroll-padding-top:110px}
+
+.aparelhos{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
+.ap{display:inline-flex;align-items:center;gap:7px;font-size:13.5px;font-weight:500;color:#EADFD3;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:999px;padding:6px 13px}
+.ap svg{width:15px;height:15px;fill:none;stroke:var(--ouro-cl);stroke-width:1.8}
+.ap em{font-style:normal;color:var(--ouro-cl);font-size:12px}
+.ap.breve{opacity:.85}
