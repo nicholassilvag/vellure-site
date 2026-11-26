@@ -172,9 +172,9 @@
         <div class="campo"><label for="c-ga">Aumento que você espera no fechamento <output id="o-ga"></output></label><input type="range" id="c-ga" min="1" max="30" step="1" value="5"></div>
         <div class="campo"><span class="rotulo">Plano do Vellure</span>
           <div class="planos-calc" role="radiogroup" aria-label="Plano do Vellure">
-            <button type="button" role="radio" aria-checked="true" data-plano="Essencial" data-valor="237">Essencial</button>
-            <button type="button" role="radio" aria-checked="false" data-plano="Pro" data-valor="397">Pro</button>
-            <button type="button" role="radio" aria-checked="false" data-plano="Clínica" data-valor="476">Clínica</button>
+            <button type="button" role="radio" aria-checked="true" data-plano="Essencial" data-valor="297">Essencial</button>
+            <button type="button" role="radio" aria-checked="false" data-plano="Pro" data-valor="497">Pro</button>
+            <button type="button" role="radio" aria-checked="false" data-plano="Clínica" data-valor="597">Clínica</button>
           </div>
         </div>
       </div>
@@ -182,7 +182,7 @@
         <p>Faturamento a mais por mês (estimativa)</p>
         <div class="grande" id="r-rec">R$ 0</div>
         <div class="linha"><span>Procedimentos a mais por mês</span><b id="r-proc">0</b></div>
-        <div class="linha"><span id="r-plano">Custo do Vellure (Essencial, plano anual)</span><b id="r-custo">R$ 237/mês</b></div>
+        <div class="linha"><span id="r-plano">Custo do Vellure (Essencial, mensal)</span><b id="r-custo">R$ 297/mês</b></div>
         <div class="linha"><span>Procedimentos que pagam o mês</span><b id="r-paga">1</b></div>
         <p class="nota" style="color:#9E9288">Conta feita só com os números que você escolheu. Não é promessa de resultado.</p>
       </div>
@@ -308,7 +308,7 @@
 
   const $ = id => document.getElementById(id);
   const brl = v => 'R$ ' + Math.round(v).toLocaleString('pt-BR');
-  let custo = 237;
+  let custo = 297;
   const calc = () => {
     const av = +$('c-av').value, tk = +$('c-tk').value, fc = +$('c-fc').value, ga = +$('c-ga').value;
     $('o-av').textContent = av;
@@ -324,7 +324,7 @@
   document.querySelectorAll('.planos-calc button').forEach(b => b.addEventListener('click', () => {
     document.querySelectorAll('.planos-calc button').forEach(x => x.setAttribute('aria-checked', x === b));
     custo = +b.dataset.valor;
-    $('r-plano').textContent = 'Custo do Vellure (' + b.dataset.plano + ', plano anual)';
+    $('r-plano').textContent = 'Custo do Vellure (' + b.dataset.plano + ', mensal)';
     $('r-custo').textContent = brl(custo) + '/mês';
     calc();
   }));
