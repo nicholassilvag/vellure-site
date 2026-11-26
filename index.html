@@ -20,7 +20,7 @@
 <link rel="apple-touch-icon" href="assets/icone.png">
 <meta name="theme-color" content="#16110E">
 <link rel="icon" href="assets/favicon.png">
-<link rel="stylesheet" href="style.css?v=5">
+<link rel="stylesheet" href="style.css?v=6">
 <script>document.documentElement.classList.add('js')</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Vellure", "url": "https://vellure3d.com.br/", "logo": "https://vellure3d.com.br/assets/icone.png", "email": "contato@vellure3d.com.br", "areaServed": "BR"}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Vellure", "applicationCategory": "MedicalApplication", "operatingSystem": "Android", "inLanguage": ["pt-BR", "en"], "url": "https://vellure3d.com.br/", "image": "https://vellure3d.com.br/assets/compartilhar.jpg", "description": "App para clínicas de estética: escaneamento facial 3D, simulação de procedimentos, avaliação corporal e relatórios em PDF no tablet ou celular.", "offers": {"@type": "Offer", "price": "297.00", "priceCurrency": "BRL", "description": "Plano Essencial mensal (previsto), com 7 dias grátis"}}</script>
@@ -170,12 +170,19 @@
         <div class="campo"><label for="c-tk">Valor médio do procedimento <output id="o-tk"></output></label><input type="range" id="c-tk" min="300" max="10000" step="100" value="1500"></div>
         <div class="campo"><label for="c-fc">Taxa de fechamento hoje <output id="o-fc"></output></label><input type="range" id="c-fc" min="5" max="90" step="1" value="40"></div>
         <div class="campo"><label for="c-ga">Aumento que você espera no fechamento <output id="o-ga"></output></label><input type="range" id="c-ga" min="1" max="30" step="1" value="5"></div>
+        <div class="campo"><span class="rotulo">Plano do Vellure</span>
+          <div class="planos-calc" role="radiogroup" aria-label="Plano do Vellure">
+            <button type="button" role="radio" aria-checked="true" data-plano="Essencial" data-valor="237">Essencial</button>
+            <button type="button" role="radio" aria-checked="false" data-plano="Pro" data-valor="397">Pro</button>
+            <button type="button" role="radio" aria-checked="false" data-plano="Clínica" data-valor="476">Clínica</button>
+          </div>
+        </div>
       </div>
       <div class="calc-out" aria-live="polite">
         <p>Faturamento a mais por mês (estimativa)</p>
         <div class="grande" id="r-rec">R$ 0</div>
         <div class="linha"><span>Procedimentos a mais por mês</span><b id="r-proc">0</b></div>
-        <div class="linha"><span>Custo do Vellure (plano anual)</span><b>R$ 197/mês</b></div>
+        <div class="linha"><span id="r-plano">Custo do Vellure (Essencial, plano anual)</span><b id="r-custo">R$ 237/mês</b></div>
         <div class="linha"><span>Procedimentos que pagam o mês</span><b id="r-paga">1</b></div>
         <p class="nota" style="color:#9E9288">Conta feita só com os números que você escolheu. Não é promessa de resultado.</p>
       </div>
@@ -301,6 +308,7 @@
 
   const $ = id => document.getElementById(id);
   const brl = v => 'R$ ' + Math.round(v).toLocaleString('pt-BR');
+  let custo = 237;
   const calc = () => {
     const av = +$('c-av').value, tk = +$('c-tk').value, fc = +$('c-fc').value, ga = +$('c-ga').value;
     $('o-av').textContent = av;
@@ -310,9 +318,16 @@
     const extra = av * Math.min(ga, 100 - fc) / 100;
     $('r-proc').textContent = extra.toLocaleString('pt-BR', { maximumFractionDigits: 1 });
     $('r-rec').textContent = brl(extra * tk);
-    $('r-paga').textContent = Math.max(1, Math.ceil(197 / tk));
+    $('r-paga').textContent = Math.max(1, Math.ceil(custo / tk));
   };
   ['c-av', 'c-tk', 'c-fc', 'c-ga'].forEach(id => $(id).addEventListener('input', calc));
+  document.querySelectorAll('.planos-calc button').forEach(b => b.addEventListener('click', () => {
+    document.querySelectorAll('.planos-calc button').forEach(x => x.setAttribute('aria-checked', x === b));
+    custo = +b.dataset.valor;
+    $('r-plano').textContent = 'Custo do Vellure (' + b.dataset.plano + ', plano anual)';
+    $('r-custo').textContent = brl(custo) + '/mês';
+    calc();
+  }));
   calc();
 
   const io = new IntersectionObserver(es => es.forEach(e => {
