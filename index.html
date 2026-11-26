@@ -20,7 +20,7 @@
 <link rel="apple-touch-icon" href="assets/icone.png">
 <meta name="theme-color" content="#16110E">
 <link rel="icon" href="assets/favicon.png">
-<link rel="stylesheet" href="style.css?v=6">
+<link rel="stylesheet" href="style.css?v=7">
 <script>document.documentElement.classList.add('js')</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Vellure", "url": "https://vellure3d.com.br/", "logo": "https://vellure3d.com.br/assets/icone.png", "email": "contato@vellure3d.com.br", "areaServed": "BR"}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Vellure", "applicationCategory": "MedicalApplication", "operatingSystem": "Android", "inLanguage": ["pt-BR", "en"], "url": "https://vellure3d.com.br/", "image": "https://vellure3d.com.br/assets/compartilhar.jpg", "description": "App para clínicas de estética: escaneamento facial 3D, simulação de procedimentos, avaliação corporal e relatórios em PDF no tablet ou celular.", "offers": {"@type": "Offer", "price": "297.00", "priceCurrency": "BRL", "description": "Plano Essencial mensal (previsto), com 7 dias grátis"}}</script>
@@ -183,7 +183,8 @@
         <div class="grande" id="r-rec">R$ 0</div>
         <div class="linha"><span>Procedimentos a mais por mês</span><b id="r-proc">0</b></div>
         <div class="linha"><span id="r-plano">Custo do Vellure (Essencial, mensal)</span><b id="r-custo">R$ 297/mês</b></div>
-        <div class="linha"><span>Procedimentos que pagam o mês</span><b id="r-paga">1</b></div>
+        <div class="linha"><span>Saldo depois de pagar o Vellure</span><b id="r-saldo">R$ 0</b></div>
+        <p class="saldo-nota" id="r-nota"></p>
         <p class="nota" style="color:#9E9288">Conta feita só com os números que você escolheu. Não é promessa de resultado.</p>
       </div>
     </div>
@@ -318,7 +319,14 @@
     const extra = av * Math.min(ga, 100 - fc) / 100;
     $('r-proc').textContent = extra.toLocaleString('pt-BR', { maximumFractionDigits: 1 });
     $('r-rec').textContent = brl(extra * tk);
-    $('r-paga').textContent = Math.max(1, Math.ceil(custo / tk));
+    const ganho = extra * tk, saldo = ganho - custo;
+    const plano = document.querySelector('.planos-calc button[aria-checked="true"]').dataset.plano;
+    $('r-saldo').textContent = (saldo >= 0 ? '+ ' : '− ') + brl(Math.abs(saldo));
+    $('r-saldo').className = saldo >= 0 ? 'pos' : 'neg';
+    const precisa = Math.ceil(custo / tk);
+    $('r-nota').textContent = saldo >= 0
+      ? 'Com esses números, o plano ' + plano + ' se paga e ainda sobra dinheiro.'
+      : 'Com esses números, o plano ' + plano + ' ainda não se paga. Ele se paga com ' + precisa + (precisa === 1 ? ' procedimento' : ' procedimentos') + ' a mais por mês.';
   };
   ['c-av', 'c-tk', 'c-fc', 'c-ga'].forEach(id => $(id).addEventListener('input', calc));
   document.querySelectorAll('.planos-calc button').forEach(b => b.addEventListener('click', () => {

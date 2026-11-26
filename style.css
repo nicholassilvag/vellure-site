@@ -149,6 +149,9 @@ input[type=range]{width:100%;accent-color:var(--rose);height:32px;margin:0}
 .calc-out .linha{display:flex;justify-content:space-between;gap:12px;border-top:1px solid rgba(255,255,255,.1);padding-top:14px;font-size:15px}
 .calc-out .linha b{color:#fff;white-space:nowrap;flex:0 0 auto}
 .calc-out .linha span{flex:1 1 auto;min-width:0}
+.calc-out .linha b.pos{color:#9FD8A6}
+.calc-out .linha b.neg{color:#F0A49B}
+.calc-out .saldo-nota{font-size:14px;color:#C8BAAD;margin-top:-6px}
 
 /* planos */
 .planos{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:56px;align-items:stretch;text-align:left}
